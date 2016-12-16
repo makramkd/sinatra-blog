@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.2.4'
 
-gem 'sinatra', require: 'sinatra/base'
+gem 'sinatra'
 gem 'unicorn'
 gem 'erubis'
 gem 'i18n'
@@ -23,7 +23,10 @@ gem 'stylus'
 gem 'stylus-source'
 gem 'eco'
 gem 'json'
-gem 'sinatra-contrib', github: 'maccman/sinatra-contrib'
+
+github 'sinatra/sinatra' do
+  gem 'sinatra-contrib'
+end
 
 group :development do
   gem 'thin'
